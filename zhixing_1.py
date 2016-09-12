@@ -8,7 +8,7 @@ html = requests.get('http://zhixing.bjtu.edu.cn/forum-624-1.html')
 jianzhi = re.findall('class="s xst">(.*?)</a>',html.text,re.S)
 chinese = u'数据挖掘|Python'
 
-print chinese
+print u'搜素关键词:'+chinese
 
 for each in jianzhi:
     if not re.search(chinese,each) is None:
